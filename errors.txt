@@ -1,0 +1,4 @@
+[19-Mar-2011 11:10:53] PHP Parse error:  parse error, expecting `T_OLD_FUNCTION' or `T_FUNCTION' or `T_VAR' or `'}'' in c:\phpdev\www\codeigniter\system\core\URI.php on line 141
+[19-Mar-2011 11:10:53] PHP Fatal error:  Cannot instantiate non-existent class:  ci_uri in c:\phpdev\www\codeigniter\system\core\Common.php on line 166
+[19-Mar-2011 11:11:56] PHP Parse error:  parse error, expecting `T_OLD_FUNCTION' or `T_FUNCTION' or `T_VAR' or `'}'' in c:\phpdev\www\codeigniter\system\core\URI.php on line 141
+[19-Mar-2011 11:11:56] PHP Fatal error:  Cannot instantiate non-existent class:  ci_uri in c:\phpdev\www\codeigniter\system\core\Common.php on line 166

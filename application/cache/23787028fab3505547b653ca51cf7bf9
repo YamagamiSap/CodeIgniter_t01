@@ -1,0 +1,672 @@
+1301130172TS---><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+<html lang="ja"> 
+<head> 
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8"> 
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css"> 
+<META HTTP-EQUIV="Content-Script-Type" CONTENT="text/javascript"> 
+
+<title>掲示板さんぷる</title>
+
+</head>
+<body text="#696969">
+
+<CENTER>
+<div align="center" style="width:50%;">
+<font size="2">
+
+<font color="#FF0000" size="1"></font>
+
+<form action="http://localhost/CodeIgniter/index.php/bbs_test/cbbsinsert" method="post" accept-charset="utf-8" name="myform" id="myform">
+<br>
+<table border="1" bordercolor=~#525252" bgColor="#FFFFFF" cellSpacing="0" cellPadding="0" width="100%"> 
+	<tr>
+		<td align="left" width="20%"><font size="2" >
+			名前
+		</font></td>
+		<td align="left"><font size="2" >
+			<input type="text" id="b_name" name="b_name" size="15" value="" />
+		</font></td>
+	</tr>
+
+	<tr>
+		<td align="left"><font size="2" >
+			題名
+		</font></td>
+		<td align="left"><font size="2" >
+			<input type="text" id="b_title" name="b_title" size="15" value="" />
+		</font></td>
+	</tr>
+
+	<tr>
+		<td align="left"><font size="2" >
+			内容
+		</font></td>
+		<td align="left"><font size="2" >
+			<textarea cols="30" rows="5" wrap="off" id="b_main" name="b_main"></textarea>
+		</font></td>
+	</tr>
+
+	<tr>
+		<td align="left"><font size="2" >
+			E-mail
+		</font></td>
+		<td align="left"><font size="2" >
+			<input type="text" id="b_email" name="b_email" size="15" value="" />
+		</font></td>
+	</tr>
+
+	<tr>
+		<td align="left"><font size="2" >
+			URL
+		</font></td>
+		<td align="left"><font size="2" >
+			<input type="text" id="b_url" name="b_url" size="20" value="" />
+		</font></td>
+	</tr>
+
+	<tr>
+		<td align="left" colspan="2"><font size="2" >
+			Pass : <input type="text" id="del_pass" name="del_pass" size="5"/> ※削除時に必要。
+		</font></td>
+	</tr>
+
+</table>
+
+<input type="submit" id="submit_bt" name="submit_bt" value="投稿" />
+<input type="reset" value="ｸﾘｱ" />
+</form>
+
+<br>
+<br>
+
+該当の書込みを削除しました。<br>
+
+<div align="right">
+<form action="http://localhost/CodeIgniter/index.php/bbs_test/bbsdelete" method="post" accept-charset="utf-8" name="delform" id="delform"><font color="#FF0000" size="2">※記事を削除する場合はコチラから</font><br>
+No. <input type="text" size="1" name="select_no" id="select_no" />  Pass: <input type="text" size="2" name="select_pass" id="select_pass" />  <input type="submit" name="del_bt" id="del_bt" value="削除" />
+</form>
+</div>
+
+<hr color="#595959" />
+<br>
+<br>
+
+<div align="center" style="width:80%;">
+
+<!-- メイン書込み 新着順 -->
+<table border="0" bgcolor="#ccffff" cellSpacing="0" cellPadding="0" width="100%"> 
+	<tr>
+		<td><font size="2">
+			<div align="left" style="margin-left:20px;"><font color="#ff9966"><b>★ 題名　です</b></font>   ...No.10</div>
+		</font></td>
+	</tr>
+	<tr>
+		<td><font size="2">
+			<div align="left" style="margin-left:50px; margin-top:5px;">名前　です・・・[<a href="mailto:"><font color="#606060">Mail</font></a>] : [<a href=""><font color="#606060">URL</font></a>]</div>
+		</font></td>
+	</tr>
+	<tr>
+		<td><font size="2">
+			<hr width="85%">
+		</font></td>
+	</tr>
+	<tr>
+		<td align="center"><font size="2">
+			てすと<br>
+してますよ。		</font></td>
+	</tr>
+	<tr>
+		<td><font size="2">
+			<div align="right" width="100%">
+			<a href="http://localhost/CodeIgniter/index.php/bbs_test/bbsres?id=10">Res:</a><br>
+			2011-03-26 06:38:20			</div>
+		</font></td>
+	</tr>
+</table>
+
+	<!-- 返信書込み書込み レス順 -->
+																															<br>
+<br>
+<!-- メイン書込み 新着順 -->
+<table border="0" bgcolor="#ccffff" cellSpacing="0" cellPadding="0" width="100%"> 
+	<tr>
+		<td><font size="2">
+			<div align="left" style="margin-left:20px;"><font color="#ff9966"><b>★ 改行でてすと</b></font>   ...No.8</div>
+		</font></td>
+	</tr>
+	<tr>
+		<td><font size="2">
+			<div align="left" style="margin-left:50px; margin-top:5px;">てすと・・・[<a href="mailto:"><font color="#606060">Mail</font></a>] : [<a href=""><font color="#606060">URL</font></a>]</div>
+		</font></td>
+	</tr>
+	<tr>
+		<td><font size="2">
+			<hr width="85%">
+		</font></td>
+	</tr>
+	<tr>
+		<td align="center"><font size="2">
+			あ<br>
+い<br>
+う<br>
+え<br>
+お		</font></td>
+	</tr>
+	<tr>
+		<td><font size="2">
+			<div align="right" width="100%">
+			<a href="http://localhost/CodeIgniter/index.php/bbs_test/bbsres?id=8">Res:</a><br>
+			2011-03-26 06:19:01			</div>
+		</font></td>
+	</tr>
+</table>
+
+	<!-- 返信書込み書込み レス順 -->
+																															<br>
+<br>
+<!-- メイン書込み 新着順 -->
+<table border="0" bgcolor="#ccffff" cellSpacing="0" cellPadding="0" width="100%"> 
+	<tr>
+		<td><font size="2">
+			<div align="left" style="margin-left:20px;"><font color="#ff9966"><b>★ みてください</b></font>   ...No.7</div>
+		</font></td>
+	</tr>
+	<tr>
+		<td><font size="2">
+			<div align="left" style="margin-left:50px; margin-top:5px;">田中花子・・・[<a href="mailto:"><font color="#606060">Mail</font></a>] : [<a href=""><font color="#606060">URL</font></a>]</div>
+		</font></td>
+	</tr>
+	<tr>
+		<td><font size="2">
+			<hr width="85%">
+		</font></td>
+	</tr>
+	<tr>
+		<td align="center"><font size="2">
+			改行<br>
+するのか<br>
+チェックですよ		</font></td>
+	</tr>
+	<tr>
+		<td><font size="2">
+			<div align="right" width="100%">
+			<a href="http://localhost/CodeIgniter/index.php/bbs_test/bbsres?id=7">Res:</a><br>
+			2011-03-26 06:16:43			</div>
+		</font></td>
+	</tr>
+</table>
+
+	<!-- 返信書込み書込み レス順 -->
+																															<br>
+<br>
+<!-- メイン書込み 新着順 -->
+<table border="0" bgcolor="#ccffff" cellSpacing="0" cellPadding="0" width="100%"> 
+	<tr>
+		<td><font size="2">
+			<div align="left" style="margin-left:20px;"><font color="#ff9966"><b>★ 削除テスト</b></font>   ...No.4</div>
+		</font></td>
+	</tr>
+	<tr>
+		<td><font size="2">
+			<div align="left" style="margin-left:50px; margin-top:5px;">削除テスト・・・[<a href="mailto:"><font color="#606060">Mail</font></a>] : [<a href=""><font color="#606060">URL</font></a>]</div>
+		</font></td>
+	</tr>
+	<tr>
+		<td><font size="2">
+			<hr width="85%">
+		</font></td>
+	</tr>
+	<tr>
+		<td align="center"><font size="2">
+			削除用処理のテストです		</font></td>
+	</tr>
+	<tr>
+		<td><font size="2">
+			<div align="right" width="100%">
+			<a href="http://localhost/CodeIgniter/index.php/bbs_test/bbsres?id=4">Res:</a><br>
+			2011-03-25 11:53:59			</div>
+		</font></td>
+	</tr>
+</table>
+
+	<!-- 返信書込み書込み レス順 -->
+																						<div align="right">
+	<table border="0" bgcolor="#ffcccc" cellSpacing="0" cellPadding="0" width="80%">
+		<tr>
+			<td><font size="2">
+				<div align="left" style="margin-left:20px;"><font color="#009999"><b>▼ Re:削除にレス</b></font>   ...No.4 - 7</div>
+			</font></td>
+		</tr>
+		<tr>
+			<td><font size="2">
+				<div align="left" style="margin-left:50px; margin-top:5px;">鈴木　二浪・・・[<a href="mailto:"><font color="#606060">Mail</font></a>] : [<a href=""><font color="#606060">URL</font></a>]</div>
+			</font></td>
+		</tr>
+		<tr>
+			<td><font size="2">
+				<hr width="85%">
+			</font></td>
+		</tr>
+		<tr>
+			<td align="center"><font size="2">
+				<div align="center">
+					削除するファイルにレスしてみる事にした				</div>
+			</font></td>
+		</tr>
+		<tr>
+			<td><font size="2">
+				<div align="right" width="100%">
+				2011-03-25 09:49:56				</div>
+			</font></td>
+		</tr>
+		<tr>
+			<td><font size="2">
+				<hr color="#575757" width="95%">
+			</font></td>
+		</tr>
+	</table>
+	</div>
+						<div align="right">
+	<table border="0" bgcolor="#ffcccc" cellSpacing="0" cellPadding="0" width="80%">
+		<tr>
+			<td><font size="2">
+				<div align="left" style="margin-left:20px;"><font color="#009999"><b>▼ Re:削除にレス</b></font>   ...No.4 - 8</div>
+			</font></td>
+		</tr>
+		<tr>
+			<td><font size="2">
+				<div align="left" style="margin-left:50px; margin-top:5px;">鈴木　二浪・・・[<a href="mailto:"><font color="#606060">Mail</font></a>] : [<a href=""><font color="#606060">URL</font></a>]</div>
+			</font></td>
+		</tr>
+		<tr>
+			<td><font size="2">
+				<hr width="85%">
+			</font></td>
+		</tr>
+		<tr>
+			<td align="center"><font size="2">
+				<div align="center">
+					削除するファイルにレスしてみる事にした				</div>
+			</font></td>
+		</tr>
+		<tr>
+			<td><font size="2">
+				<div align="right" width="100%">
+				2011-03-25 09:53:18				</div>
+			</font></td>
+		</tr>
+		<tr>
+			<td><font size="2">
+				<hr color="#575757" width="95%">
+			</font></td>
+		</tr>
+	</table>
+	</div>
+						<div align="right">
+	<table border="0" bgcolor="#ffcccc" cellSpacing="0" cellPadding="0" width="80%">
+		<tr>
+			<td><font size="2">
+				<div align="left" style="margin-left:20px;"><font color="#009999"><b>▼ Re:削除にレス</b></font>   ...No.4 - 9</div>
+			</font></td>
+		</tr>
+		<tr>
+			<td><font size="2">
+				<div align="left" style="margin-left:50px; margin-top:5px;">鈴木　二浪・・・[<a href="mailto:"><font color="#606060">Mail</font></a>] : [<a href=""><font color="#606060">URL</font></a>]</div>
+			</font></td>
+		</tr>
+		<tr>
+			<td><font size="2">
+				<hr width="85%">
+			</font></td>
+		</tr>
+		<tr>
+			<td align="center"><font size="2">
+				<div align="center">
+					削除するファイルにレスしてみる事にした				</div>
+			</font></td>
+		</tr>
+		<tr>
+			<td><font size="2">
+				<div align="right" width="100%">
+				2011-03-25 09:53:22				</div>
+			</font></td>
+		</tr>
+		<tr>
+			<td><font size="2">
+				<hr color="#575757" width="95%">
+			</font></td>
+		</tr>
+	</table>
+	</div>
+						<br>
+<br>
+<!-- メイン書込み 新着順 -->
+<table border="0" bgcolor="#ccffff" cellSpacing="0" cellPadding="0" width="100%"> 
+	<tr>
+		<td><font size="2">
+			<div align="left" style="margin-left:20px;"><font color="#ff9966"><b>★ テスト中</b></font>   ...No.2</div>
+		</font></td>
+	</tr>
+	<tr>
+		<td><font size="2">
+			<div align="left" style="margin-left:50px; margin-top:5px;">登録　テスト・・・[<a href="mailto:test@test.com"><font color="#606060">Mail</font></a>] : [<a href="http://www.test_desuyo.ne.jp"><font color="#606060">URL</font></a>]</div>
+		</font></td>
+	</tr>
+	<tr>
+		<td><font size="2">
+			<hr width="85%">
+		</font></td>
+	</tr>
+	<tr>
+		<td align="center"><font size="2">
+			登録データのテスト中なう		</font></td>
+	</tr>
+	<tr>
+		<td><font size="2">
+			<div align="right" width="100%">
+			<a href="http://localhost/CodeIgniter/index.php/bbs_test/bbsres?id=2">Res:</a><br>
+			2011-03-25 09:13:18			</div>
+		</font></td>
+	</tr>
+</table>
+
+	<!-- 返信書込み書込み レス順 -->
+				<div align="right">
+	<table border="0" bgcolor="#ffcccc" cellSpacing="0" cellPadding="0" width="80%">
+		<tr>
+			<td><font size="2">
+				<div align="left" style="margin-left:20px;"><font color="#009999"><b>▼ Re:返信処理テスト</b></font>   ...No.2 - 1</div>
+			</font></td>
+		</tr>
+		<tr>
+			<td><font size="2">
+				<div align="left" style="margin-left:50px; margin-top:5px;">返信テスト・・・[<a href="mailto:test@test.ne.jp"><font color="#606060">Mail</font></a>] : [<a href="http://www.test_test.ne.jp"><font color="#606060">URL</font></a>]</div>
+			</font></td>
+		</tr>
+		<tr>
+			<td><font size="2">
+				<hr width="85%">
+			</font></td>
+		</tr>
+		<tr>
+			<td align="center"><font size="2">
+				<div align="center">
+					返信処理のテスト中です。				</div>
+			</font></td>
+		</tr>
+		<tr>
+			<td><font size="2">
+				<div align="right" width="100%">
+				2011-03-25 05:22:14				</div>
+			</font></td>
+		</tr>
+		<tr>
+			<td><font size="2">
+				<hr color="#575757" width="95%">
+			</font></td>
+		</tr>
+	</table>
+	</div>
+						<div align="right">
+	<table border="0" bgcolor="#ffcccc" cellSpacing="0" cellPadding="0" width="80%">
+		<tr>
+			<td><font size="2">
+				<div align="left" style="margin-left:20px;"><font color="#009999"><b>▼ Re:返信処理テスト</b></font>   ...No.2 - 2</div>
+			</font></td>
+		</tr>
+		<tr>
+			<td><font size="2">
+				<div align="left" style="margin-left:50px; margin-top:5px;">返信テスト・・・[<a href="mailto:test@test.ne.jp"><font color="#606060">Mail</font></a>] : [<a href="http://www.test_test.ne.jp"><font color="#606060">URL</font></a>]</div>
+			</font></td>
+		</tr>
+		<tr>
+			<td><font size="2">
+				<hr width="85%">
+			</font></td>
+		</tr>
+		<tr>
+			<td align="center"><font size="2">
+				<div align="center">
+					返信処理のテスト中です。				</div>
+			</font></td>
+		</tr>
+		<tr>
+			<td><font size="2">
+				<div align="right" width="100%">
+				2011-03-25 05:22:18				</div>
+			</font></td>
+		</tr>
+		<tr>
+			<td><font size="2">
+				<hr color="#575757" width="95%">
+			</font></td>
+		</tr>
+	</table>
+	</div>
+															<div align="right">
+	<table border="0" bgcolor="#ffcccc" cellSpacing="0" cellPadding="0" width="80%">
+		<tr>
+			<td><font size="2">
+				<div align="left" style="margin-left:20px;"><font color="#009999"><b>▼ Re:テストです</b></font>   ...No.2 - 6</div>
+			</font></td>
+		</tr>
+		<tr>
+			<td><font size="2">
+				<div align="left" style="margin-left:50px; margin-top:5px;">鈴木　三郎・・・[<a href="mailto:"><font color="#606060">Mail</font></a>] : [<a href=""><font color="#606060">URL</font></a>]</div>
+			</font></td>
+		</tr>
+		<tr>
+			<td><font size="2">
+				<hr width="85%">
+			</font></td>
+		</tr>
+		<tr>
+			<td align="center"><font size="2">
+				<div align="center">
+					確認中				</div>
+			</font></td>
+		</tr>
+		<tr>
+			<td><font size="2">
+				<div align="right" width="100%">
+				2011-03-25 09:13:18				</div>
+			</font></td>
+		</tr>
+		<tr>
+			<td><font size="2">
+				<hr color="#575757" width="95%">
+			</font></td>
+		</tr>
+	</table>
+	</div>
+															<br>
+<br>
+<!-- メイン書込み 新着順 -->
+<table border="0" bgcolor="#ccffff" cellSpacing="0" cellPadding="0" width="100%"> 
+	<tr>
+		<td><font size="2">
+			<div align="left" style="margin-left:20px;"><font color="#ff9966"><b>★ テストデータ</b></font>   ...No.1</div>
+		</font></td>
+	</tr>
+	<tr>
+		<td><font size="2">
+			<div align="left" style="margin-left:50px; margin-top:5px;">てすとデータ・・・[<a href="mailto:"><font color="#606060">Mail</font></a>] : [<a href=""><font color="#606060">URL</font></a>]</div>
+		</font></td>
+	</tr>
+	<tr>
+		<td><font size="2">
+			<hr width="85%">
+		</font></td>
+	</tr>
+	<tr>
+		<td align="center"><font size="2">
+			テストデータとして、てすと記入中		</font></td>
+	</tr>
+	<tr>
+		<td><font size="2">
+			<div align="right" width="100%">
+			<a href="http://localhost/CodeIgniter/index.php/bbs_test/bbsres?id=1">Res:</a><br>
+			2011-03-26 05:32:58			</div>
+		</font></td>
+	</tr>
+</table>
+
+	<!-- 返信書込み書込み レス順 -->
+										<div align="right">
+	<table border="0" bgcolor="#ffcccc" cellSpacing="0" cellPadding="0" width="80%">
+		<tr>
+			<td><font size="2">
+				<div align="left" style="margin-left:20px;"><font color="#009999"><b>▼ Re:返信する。</b></font>   ...No.1 - 3</div>
+			</font></td>
+		</tr>
+		<tr>
+			<td><font size="2">
+				<div align="left" style="margin-left:50px; margin-top:5px;">鈴木　太郎・・・[<a href="mailto:"><font color="#606060">Mail</font></a>] : [<a href=""><font color="#606060">URL</font></a>]</div>
+			</font></td>
+		</tr>
+		<tr>
+			<td><font size="2">
+				<hr width="85%">
+			</font></td>
+		</tr>
+		<tr>
+			<td align="center"><font size="2">
+				<div align="center">
+					返信処理のテストですよ				</div>
+			</font></td>
+		</tr>
+		<tr>
+			<td><font size="2">
+				<div align="right" width="100%">
+				2011-03-25 06:54:53				</div>
+			</font></td>
+		</tr>
+		<tr>
+			<td><font size="2">
+				<hr color="#575757" width="95%">
+			</font></td>
+		</tr>
+	</table>
+	</div>
+						<div align="right">
+	<table border="0" bgcolor="#ffcccc" cellSpacing="0" cellPadding="0" width="80%">
+		<tr>
+			<td><font size="2">
+				<div align="left" style="margin-left:20px;"><font color="#009999"><b>▼ Re:テストデータ</b></font>   ...No.1 - 4</div>
+			</font></td>
+		</tr>
+		<tr>
+			<td><font size="2">
+				<div align="left" style="margin-left:50px; margin-top:5px;">鈴木　次郎・・・[<a href="mailto:"><font color="#606060">Mail</font></a>] : [<a href=""><font color="#606060">URL</font></a>]</div>
+			</font></td>
+		</tr>
+		<tr>
+			<td><font size="2">
+				<hr width="85%">
+			</font></td>
+		</tr>
+		<tr>
+			<td align="center"><font size="2">
+				<div align="center">
+					こっちも返信てすとなのです。				</div>
+			</font></td>
+		</tr>
+		<tr>
+			<td><font size="2">
+				<div align="right" width="100%">
+				2011-03-25 06:57:05				</div>
+			</font></td>
+		</tr>
+		<tr>
+			<td><font size="2">
+				<hr color="#575757" width="95%">
+			</font></td>
+		</tr>
+	</table>
+	</div>
+						<div align="right">
+	<table border="0" bgcolor="#ffcccc" cellSpacing="0" cellPadding="0" width="80%">
+		<tr>
+			<td><font size="2">
+				<div align="left" style="margin-left:20px;"><font color="#009999"><b>▼ Re:テストデータ</b></font>   ...No.1 - 5</div>
+			</font></td>
+		</tr>
+		<tr>
+			<td><font size="2">
+				<div align="left" style="margin-left:50px; margin-top:5px;">鈴木　次郎・・・[<a href="mailto:"><font color="#606060">Mail</font></a>] : [<a href=""><font color="#606060">URL</font></a>]</div>
+			</font></td>
+		</tr>
+		<tr>
+			<td><font size="2">
+				<hr width="85%">
+			</font></td>
+		</tr>
+		<tr>
+			<td align="center"><font size="2">
+				<div align="center">
+					こっちも返信てすとなのです。				</div>
+			</font></td>
+		</tr>
+		<tr>
+			<td><font size="2">
+				<div align="right" width="100%">
+				2011-03-25 06:58:04				</div>
+			</font></td>
+		</tr>
+		<tr>
+			<td><font size="2">
+				<hr color="#575757" width="95%">
+			</font></td>
+		</tr>
+	</table>
+	</div>
+																		<div align="right">
+	<table border="0" bgcolor="#ffcccc" cellSpacing="0" cellPadding="0" width="80%">
+		<tr>
+			<td><font size="2">
+				<div align="left" style="margin-left:20px;"><font color="#009999"><b>▼ Re:返信ですよ</b></font>   ...No.1 - 10</div>
+			</font></td>
+		</tr>
+		<tr>
+			<td><font size="2">
+				<div align="left" style="margin-left:50px; margin-top:5px;">鈴木　四郎・・・[<a href="mailto:test@test.ne.jp"><font color="#606060">Mail</font></a>] : [<a href="http://www.test_test.ne.jp"><font color="#606060">URL</font></a>]</div>
+			</font></td>
+		</tr>
+		<tr>
+			<td><font size="2">
+				<hr width="85%">
+			</font></td>
+		</tr>
+		<tr>
+			<td align="center"><font size="2">
+				<div align="center">
+					テストだ。<br>
+テストにつきテストだ<br>
+テスト中なんです。				</div>
+			</font></td>
+		</tr>
+		<tr>
+			<td><font size="2">
+				<div align="right" width="100%">
+				2011-03-26 05:32:58				</div>
+			</font></td>
+		</tr>
+		<tr>
+			<td><font size="2">
+				<hr color="#575757" width="95%">
+			</font></td>
+		</tr>
+	</table>
+	</div>
+			<br>
+<br>
+
+</div>
+
+
+</font>
+</div>
+</CENTER>
+
+</body>
+</html>

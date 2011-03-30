@@ -1,0 +1,103 @@
+<?php
+
+class Bbsmodel extends CI_Model {
+
+
+	/*
+	*  投稿書込みを探しにいく
+	*/
+	function select_main() {
+		// 検索句にorder by句を付属する
+		$this->db->order_by("id", "desc");
+		// テーブルを検索する
+		$query = $this->db->get("bbs_info_tbl");
+
+		return $query;
+	}
+
+	/*
+	*  返信用に返信対照の書込みのみを取得する
+	*/
+	function select_res() {
+
+		// GETからIDを取得する
+		$id = $this->input->get("id");
+		// 検索句にwhere条件を追加する
+		$this->db->where("id", $id);
+		// テーブルを検索する
+		$query = $this->db->get("bbs_info_tbl");
+
+		return $query;
+	}
+
+
+	/*
+	*  新規投稿時のインサート処理
+	*/
+	function insert_main() {
+
+		$pass = $this->input->post("del_pass");
+		// 編集用のパスコードが未入力ならデフォルト値入力
+		if(empty($pass)){
+			$pass = "0000";
+		}
+
+		//更新するデータを取得する
+		$data = array(
+			"name"=>$this->input->post("b_name"),
+			"title"=>$this->input->post("b_title"),
+			"body"=>$this->input->post("b_main"),
+			"mail"=>$this->input->post("b_email"),
+			"url"=>$this->input->post("b_url"),
+			"del_pass"=>$pass,
+			"up_time"=>date("Y-m-d H:i:s")
+		);
+
+		// DBの更新処理をする
+		$this->db->insert("bbs_info_tbl", $data);
+	}
+
+
+	function insert_sub() {
+
+		$pass = $this->input->post("");
+		if(empty($pase)) {
+			$pase = "0000";
+		}
+
+		$data = array(
+			"id"=>$this->input->post("select_id"),
+			"res_name"=>$this->input->post("b_name"),
+			"res_title"=>$this->input->post("b_title"),
+			"res_body"=>$this->input->post("b_main"),
+			"res_mail"=>$this->input->post("b_email"),
+			"res_url"=>$this->input->post("b_url"),
+			"del_pass"=>$pass,
+			"up_time"=>date("Y-m-d H:i:s")
+		);
+
+		// DBの更新処理をする
+		$this->db->insert("bbs_res_tbl", $data);
+	}
+
+
+
+	function updata_main() {
+
+		// 更新する項目を定義
+		$date = array(
+			"res_flag" => "1"
+		);
+
+		// Resされた記事のＩＤを取得する
+		$id = $this->input->post("");
+
+		// 返信記事が書かれた場合の処理
+		$this->db->where("id", $id);
+		$this->db->update("bbs_info_tbl", $date);
+
+	}
+
+
+
+}
