@@ -59,5 +59,4 @@ class BbsInsert extends CI_Model {
 
 }
 
-/* End of file myfile.php */
-/* Location: ./system/modules/mymodule/myfile.php */
+
