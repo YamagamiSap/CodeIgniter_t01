@@ -188,5 +188,10 @@ No. <input type="text" size="1" name="select_no" id="select_no" />  Pass: <input
 </div>
 </CENTER>
 
+<!-- チェックテスト用 -->
+<!-- master is up by t01 -->
+
 </body>
 </html>
+
+
