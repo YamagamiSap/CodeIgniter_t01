@@ -52,3 +52,5 @@ class Bbs_res_delete extends CI_Controller {
 }
 
 /* ファイルサーバー用のチェック用の書込み */
+/* サイドテストをしてみる */
+/* test is check by t01 -my */
