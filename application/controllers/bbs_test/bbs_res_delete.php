@@ -51,5 +51,4 @@ class Bbs_res_delete extends CI_Controller {
 
 }
 
-/* End of file myfile.php */
-/* Location: ./system/modules/mymodule/myfile.php */
+/* ファイルサーバー用のチェック用の書込み */
